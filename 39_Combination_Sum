@@ -1,6 +1,6 @@
 class Solution {
   public:
-   void Combination(int i, int target, vector<int>&arr, vector<vector<int>>ans, vector<int>ds)
+   void Combination(int i, int target, vector<int>&arr, vector<vector<int>>&ans, vector<int>&ds)
    {
       if(i == arr.size())
       {
