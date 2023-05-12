@@ -1,0 +1,23 @@
+class Solution {
+public:
+long long Solving( int i,vector<vector<int>>&arr, vector<long long>&dp)
+{
+    if(i >= arr.size())
+       return 0;
+      if(dp[i]!=-1)
+      {
+          return dp[i];
+      }
+     long long sum=arr[i][0]+Solving(i+arr[i][1]+1,arr, dp); 
+    long long sum2 = Solving(i+1, arr, dp);
+    return dp[i]= max(sum,sum2);
+
+}
+    long long mostPoints(vector<vector<int>>& questions) {
+        int n = questions.size();
+        vector<long long>dp(n, -1);
+       return Solving(0,questions, dp);
+       
+       
+    }
+};
